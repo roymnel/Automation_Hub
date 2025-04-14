@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout – Automation Hub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://www.paypal.com/sdk/js?client-id=Acsad5r1sYeFhH5ILFlYPDDuGZeKjnNrBLw2M0cu4vIc6jnDeUJCpVvechuAQuwbfpX6EkOIkkpFVp5e&currency=USD"></script>
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-4">
+  <h1>🛒 Secure Checkout</h1>
+</header>
+
+<main class="container my-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3 bg-white p-4 rounded shadow-sm">
+
+      <h4>🧰 Service: AI Legal Contract Generator</h4>
+      <p><strong>Base Price:</strong> $150.00</p>
+
+      <h5>🙏 Donate to a Christian Charity</h5>
+      <select class="form-select mb-3" id="charitySelect">
+        <option value="St. Jude">St. Jude Children's Research Hospital</option>
+        <option value="Samaritan's Purse">Samaritan’s Purse</option>
+        <option value="World Vision">World Vision</option>
+        <option value="Compassion International">Compassion International</option>
+      </select>
+
+      <label for="donationPercent" class="form-label">Donation % (optional)</label>
+      <input type="range" class="form-range" id="donationPercent" min="0" max="50" value="10" step="5" oninput="updateSummary()">
+      <p><strong>Selected Donation:</strong> <span id="donationLabel">10%</span></p>
+
+      <hr>
+      <h5>Total Amount:</h5>
+      <p id="totalAmount">$165.00</p>
+
+      <div id="paypal-button-container" class="my-3"></div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+  const basePrice = 150;
+  function updateSummary() {
+    const percent = parseInt(document.getElementById("donationPercent").value);
+    const donation = basePrice * (percent / 100);
+    const total = basePrice + donation;
+    document.getElementById("donationLabel").innerText = percent + "%";
+    document.getElementById("totalAmount").innerText = "$" + total.toFixed(2);
+  }
+
+  updateSummary();
+
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      const percent = parseInt(document.getElementById("donationPercent").value);
+      const donation = basePrice * (percent / 100);
+      const total = basePrice + donation;
+
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: total.toFixed(2)
+          },
+          description: "AI Legal Contract Generator + Donation"
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert("✅ Payment complete. Thank you " + details.payer.name.given_name + "!");
+        window.location.href = "thankyou.html";
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>

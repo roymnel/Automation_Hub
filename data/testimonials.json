@@ -1,0 +1,32 @@
+[
+  {
+    "industry": "Healthcare",
+    "name": "Dr. Angela Morris",
+    "organization": "Riverside Clinic",
+    "quote": "We reduced scheduling overhead by 80%. The system syncs everything with our calendar and reminds patients automatically."
+  },
+  {
+    "industry": "Education",
+    "name": "Mr. Brandon Lee",
+    "organization": "STEM Academy",
+    "quote": "My AI tutor setup has changed how I teach. Students now get instant feedback and personalized exercises, freeing me to focus on mentoring."
+  },
+  {
+    "industry": "Legal",
+    "name": "Sarah Linden",
+    "organization": "Linden & Associates",
+    "quote": "We used to spend days drafting NDAs. Now it's minutes. The system even tracks expiration dates and auto-sends reminders."
+  },
+  {
+    "industry": "E-commerce",
+    "name": "Marcus T.",
+    "organization": "GearGrid Co.",
+    "quote": "Our visibility on Google tripled after using the SEO bot. Price tracking helped us stay competitive without lifting a finger."
+  },
+  {
+    "industry": "Nonprofit",
+    "name": "Grace H.",
+    "organization": "United Hands Christian Mission",
+    "quote": "Donation tracking, automated thank-you emails, and instant tax reports? Game changer. We now spend our time helping people, not pushing paper."
+  }
+]

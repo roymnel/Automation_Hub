@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT & DevOps Automation – Automation Hub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="keywords" content="devops automation, server monitoring, it alerts, ai remediation, incident response tools, IT workflow automation">
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-4">
+  <h1>💻 IT & DevOps Automation</h1>
+  <p class="lead">Monitor uptime, auto-remediate issues, and notify stakeholders instantly.</p>
+</header>
+
+<main class="container my-5">
+  <div class="service-card text-center">
+    <h3 class="mb-3">Avoid downtime and automate IT tasks</h3>
+    <p>This automation evolves with cybersecurity trends, server logs, and IT support patterns.</p>
+    <p>✔️ Delivered automatically after payment</p>
+    <p>💡 Powered by Python + AI. Updated weekly with new triggers and integrations.</p>
+
+    <div class="my-4">
+      <h4>Pricing:</h4>
+      <p><strong>$199 one-time</strong> or <strong>$36/mo subscription</strong></p>
+    </div>
+
+    <div id="paypal-button-container" class="my-4"></div>
+  </div>
+</main>
+
+<script src="https://www.paypal.com/sdk/js?client-id=Acsad5r1sYeFhH5ILFlYPDDuGZeKjnNrBLw2M0cu4vIc6jnDeUJCpVvechuAQuwbfpX6EkOIkkpFVp5e&currency=USD"></script>
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    return actions.order.create({
+      purchase_units: [{
+        amount: {
+          value: '199.00'
+        },
+        description: 'IT & DevOps Automation Service'
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert('✅ Thanks ' + details.payer.name.given_name + '! Your IT automation tools are being deployed...');
+      window.location.href = "../delivery/it_deliver.py";
+    });
+  }
+}).render('#paypal-button-container');
+</script>
+
+</body>
+</html>

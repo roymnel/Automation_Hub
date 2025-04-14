@@ -1,0 +1,7 @@
+{
+  "Healthcare": ["EHR automation", "medical appointment bots", "insurance claims AI"],
+  "Education": ["AI tutor", "auto-grading Python", "online learning automation"],
+  "Legal": ["automated NDA", "contract bot", "law form generator"],
+  "E-commerce": ["price tracker", "SEO bot", "sales automation"],
+  "Nonprofits": ["donation log tool", "volunteer form bot", "Christian charity CRM"]
+}

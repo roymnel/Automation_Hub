@@ -1,0 +1,52 @@
+[
+    {
+        "industry": "Healthcare",
+        "service": "Appointment Scheduler",
+        "description": "Book and manage patient appointments automatically."
+    },
+    {
+        "industry": "Education",
+        "service": "AI Tutor",
+        "description": "On-demand tutoring powered by AI."
+    },
+    {
+        "industry": "Legal",
+        "service": "Contract Generator",
+        "description": "Automatically draft and email legal documents."
+    },
+    {
+        "industry": "Real Estate",
+        "service": "Listing Bot",
+        "description": "Auto-generate property listings with photos and pricing."
+    },
+    {
+        "industry": "Finance",
+        "service": "Invoice Creator",
+        "description": "Auto-generate and send invoices via email."
+    },
+    {
+        "industry": "E-commerce",
+        "service": "Price Tracker",
+        "description": "Track and auto-adjust product prices across marketplaces."
+    },
+    {
+        "industry": "HR / Recruiting",
+        "service": "Resume Analyzer",
+        "description": "Rank and filter resumes using keyword matching."
+    },
+    {
+        "industry": "Nonprofits",
+        "service": "Donation Tracker",
+        "description": "Manage and report on donations and tax receipts."
+    },
+    {
+        "industry": "Construction",
+        "service": "Quote Estimator",
+        "description": "Create quotes based on materials, labor, and overhead."
+    },
+    {
+        "industry": "Marketing",
+        "service": "SEO Optimizer",
+        "description": "Auto-update website keywords and descriptions via Google Trends."
+    }
+]
