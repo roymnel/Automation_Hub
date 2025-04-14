@@ -1,135 +1,106 @@
-/* === Base Reset === */
+/* style.css – Unified Visuals for Automation Hub */
+
 body {
-  background-color: #0a192f;
-  color: #f4f4f4;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-/* === Typography === */
-h1, h2, h3, h4, h5 {
-  color: #64ffda;
-  font-weight: 600;
-}
-
-a {
-  color: #64ffda;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* === Header & Footer === */
-header, footer {
-  background-color: #0d2538;
-  color: white;
-  padding: 20px 0;
+header {
+  background-color: #1e1e1e;
+  padding: 40px 20px;
   text-align: center;
-  border-bottom: 2px solid #64ffda;
 }
 
-/* === Containers and Sections === */
-.container {
-  max-width: 1080px;
-  margin: auto;
+header h1 {
+  color: #00bfff;
+  font-size: 2.4em;
+  margin: 0;
 }
 
-.bg-white {
-  background-color: #112240 !important;
-  color: #f4f4f4;
-}
-.shadow-sm {
-  box-shadow: 0 2px 12px rgba(100, 255, 218, 0.05) !important;
-}
-.rounded {
-  border-radius: 8px !important;
+.services-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* === Buttons === */
-.btn {
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  opacity: 0.95;
+.service-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
 }
 
-.btn-primary {
-  background-color: #64ffda;
-  color: #0a192f;
-  border: none;
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00bfff50;
 }
 
-.btn-primary:hover {
-  background-color: #80ffea;
-  color: #0a192f;
+.service-box h3 {
+  margin-top: 0;
+  color: #00bfff;
+  font-size: 1.4em;
 }
 
-.btn-outline-secondary {
-  border: 2px solid #64ffda;
-  color: #64ffda;
-  background-color: transparent;
-}
-.btn-outline-secondary:hover {
-  background-color: #64ffda;
-  color: #0a192f;
+.service-box a {
+  text-decoration: none;
+  color: #00bfff;
 }
 
-/* === Form Inputs === */
-input, select, textarea {
-  background-color: #1c2c45;
-  color: #f4f4f4;
-  border: 1px solid #233554;
-  padding: 10px;
-}
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #64ffda;
-  box-shadow: 0 0 0 0.2rem rgba(100, 255, 218, 0.2);
+.service-box p {
+  font-size: 0.95em;
+  color: #ccc;
 }
 
-/* === Service Cards === */
-.service-card {
-  background-color: #112240;
-  border: 1px solid #233554;
-  color: #f4f4f4;
-  padding: 24px;
+.progress-bar {
+  background-color: #2e2e2e;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.05);
-  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  margin-top: 10px;
+  height: 20px;
 }
 
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(100, 255, 218, 0.15);
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #00ff99, #00ccff);
+  text-align: right;
+  color: #000;
+  font-weight: bold;
+  padding-right: 6px;
+  line-height: 20px;
 }
 
-.service-card h4 {
-  color: #64ffda;
-  margin-bottom: 0.5rem;
+.button {
+  background-color: #00bfff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
-.service-card p {
-  color: #cfd8dc;
+.button:hover {
+  background-color: #0099cc;
 }
 
-/* === PayPal Override === */
-#paypal-button-container {
-  margin-top: 20px;
+a.button {
+  margin-top: 30px;
 }
 
-/* === Status Bar (main.py GUI) === */
-.status-bar {
-  background-color: #0d2538;
-  color: #f4f4f4;
-  padding: 8px 16px;
-  font-size: 13px;
-  font-family: monospace;
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.85em;
 }
