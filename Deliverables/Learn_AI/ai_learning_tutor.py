@@ -48,4 +48,3 @@ if __name__ == "__main__":
     df = simulate_learning_sessions()
     evaluate_learning(df)
     plot_learning_progress(df)
-
