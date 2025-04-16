@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automation Hub – Download</title>
+</head>
+<body>
+  <h2>✅ Thanks for your purchase!</h2>
+  <p id="message">Loading your script link...</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+
+    const links = {
+      health: {
+        name: "Health Assistant",
+        url: "https://raw.githubusercontent.com/roymnel/Automation_Hub/refs/heads/main/Deliverables/Health_AI/health_assistant.py"
+      },
+      invest: {
+        name: "Investment Manager",
+        url: "https://raw.githubusercontent.com/roymnel/Automation_Hub/refs/heads/main/Deliverables/Invest_AI/portfolio_manager.py"
+      },
+      learn: {
+        name: "AI Tutor",
+        url: "https://raw.githubusercontent.com/roymnel/Automation_Hub/refs/heads/main/Deliverables/Learn_AI/ai_learning_tutor.py"
+      }
+    };
+
+    if (links[product]) {
+      const file = links[product];
+      document.getElementById("message").innerHTML = `
+        <p>Click below to download <strong>${file.name}</strong>:</p>
+        <a href="${file.url}" download>
+          <button>📥 Download ${file.name}</button>
+        </a>
+      `;
+    } else {
+      document.getElementById("message").innerText = "❌ Invalid or missing product parameter.";
+    }
+  </script>
+</body>
+</html>
+
 
